@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+ 
+<!-- wwFront:start -->
+<html class="ww-app-theme-dark" lang="<%= htmlWebpackPlugin.options.lang %>">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" />
+        <base
+            href="<%= htmlWebpackPlugin.options.baseTag?.href %>"
+            target="<%= htmlWebpackPlugin.options.baseTag?.target %>"
+        />
+
+        <% if (htmlWebpackPlugin.options.title) { %>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <% } %>
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico?_wwcv=<%= htmlWebpackPlugin.options.cacheVersion %>" />
+
+        <link rel="manifest" href="manifest.json?_wwcv=1" />
+        <meta name="theme-color" content="" />
+        <link rel="apple-touch-icon" sizes="48x48" href="public/images/48-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="72x72" href="public/images/72-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="96x96" href="public/images/96-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="128x128" href="public/images/128-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="144x144" href="public/images/144-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="152x152" href="public/images/152-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="192x192" href="public/images/192-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="256x256" href="public/images/256-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="384x384" href="public/images/384-km-6464.png?_wwcv=1">
+<link rel="apple-touch-icon" sizes="512x512" href="public/images/512-km-6464.png?_wwcv=1">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<style>:root{ --ww-default-font-family: 'Ubuntu', sans-serif }</style>
+        <style>
+:root {
+--e7ad909b-970b-4c33-a4f5-edb5ccd00935: #454545CC;
+--34ce6b83-2e1d-4eed-838a-9f4496de982d: #F5F5F5;
+--838ee67d-0e7e-4e3c-bcd8-cc897fff8ced: 400 16px/24px var(--ww-default-font-family, sans-serif);
+--701b1a38-12cf-4dcb-aa38-174fee257572: #000000E6;
+--a7fe3ad5-d86a-4812-810b-595565c128f7: 400 14px/20px var(--ww-default-font-family, sans-serif);
+--0f480488-12b7-4fe8-b49a-1de054127564: #DBDBDB;
+--30729214-8e85-4c7f-83dd-6adb119095ba: #303030;
+--9cc82df6-4aa4-4cc8-8ded-03983fd99084: 400 18px/normal var(--ww-default-font-family, sans-serif);
+--9f352477-b6ae-4cdd-8520-c85855f6a3c9: 500 12px/normal var(--ww-default-font-family, sans-serif);
+--3d84b7fb-d94b-4a94-8d82-aa162a0b9257: #E65800;}
+.ww-app-theme-dark {
+--e7ad909b-970b-4c33-a4f5-edb5ccd00935: #878787;
+--34ce6b83-2e1d-4eed-838a-9f4496de982d: #1A1A1A;
+--701b1a38-12cf-4dcb-aa38-174fee257572: #FFFFFF;
+--0f480488-12b7-4fe8-b49a-1de054127564: #242424;
+--30729214-8e85-4c7f-83dd-6adb119095ba: #BFBFBF;
+--3d84b7fb-d94b-4a94-8d82-aa162a0b9257: #E65800;}
+</style>
+        <link href="https://cdn.weweb.app/public/libs/weweb-icons/css/weweb-icons.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.app/public/libs/font-awesome/5.6.3/css/fontawesome.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.app/public/libs/font-awesome/5.6.3/css/fontawesome.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.app/public/libs/font-awesome/5.6.3/css/fontawesome.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.io/public/icons/heroicons/1.0.0/style.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link href="https://cdn.weweb.io/public/icons/phosphor/1.0.0/regular/phosphor-style.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <% for (let link of htmlWebpackPlugin.options?.alternateLinks || []) { %>
+        <link rel="<%= link.rel %>" hreflang="<%= link.hreflang %>" href="<%= link.href %>" />
+        <% } %> <% if (htmlWebpackPlugin.options.structuredData) { %>
+        <script type="application/ld+json">
+            <%= htmlWebpackPlugin.options.structuredData %>
+        </script>
+        <% } %> <%= htmlWebpackPlugin.options.scripts?.head %>
+    </head>
+    <body style="margin: 0; font-family: var(--ww-default-font-family, unset)">
+        <noscript>
+            <strong>
+                We're sorry but this website doesn't work properly without JavaScript enabled. Please enable it to
+                continue.
+            </strong>
+        </noscript>
+        <div id="app"></div>
+        <!-- built files will be auto injected -->
+        <%= htmlWebpackPlugin.options.scripts?.body %>
+    </body>
+</html>
+<!-- wwFront:end -->
